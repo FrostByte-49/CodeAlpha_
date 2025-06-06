@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Planner</title>
+
+    <link rel="icon" href="assets/Picture_1.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Days+One&family=Modak&family=Rubik+Moonrocks&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <h1><i class="fas fa-calendar-week icon-qwerty"></i> &nbsp; Weekly &nbsp; Planner</h1>
+
+            <button class="theme-toggle" id="themeToggle">
+                <!-- Sun Icon (Light Mode) -->
+                <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon">
+                    <path
+                        d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+                </svg>
+
+                <!-- Moon Icon (Dark Mode) -->
+                <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="currentColor" class="icon hidden">
+                    <path fill-rule="evenodd"
+                        d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
+                        clip-rule="evenodd" />
+                </svg>
+            </button>
+
+        </header>
+
+        <div class="week-navigation">
+            <button class="nav-btn" id="prev-week"><i class="fas fa-chevron-left"></i> Previous</button>
+            <div class="week-range" id="weekRange">Week of June 5 - June 11, 2023</div>
+            <button class="nav-btn" id="next-week">Next <i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <div class="week-grid" id="weekGrid">
+            <!-- Days will be populated by JavaScript -->
+        </div>
+
+        <!-- Modal for task details -->
+        <div class="modal" id="taskModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="modalTitle">Add New Task</h2>
+                    <button class="close-modal" id="closeModal">&times;</button>
+                </div>
+                <form id="taskForm">
+                    <div class="form-group">
+                        <label for="taskTitle">Task Title</label>
+                        <input type="text" id="taskTitle" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="taskDescription">Description (Optional)</label>
+                        <textarea id="taskDescription"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="taskTime">Time</label>
+                        <input type="time" id="taskTime">
+                        <p><i class="fas fa-info-circle"></i> &nbsp; Use 24-hour Format ( e.g. 14:30 )</p>
+                    </div>
+                    <div class="modal-actions">
+                        <button type="button" class="btn btn-secondary" id="cancelTask">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Save Task</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-bottom">
+            <div class="footer">
+                <p>© 2025 Weekly Planner | All Rights Reserved</p>
+            </div>
+
+            <div class="creator">
+                <p>Created By Pranav Khalate</p>
+            </div>
+
+            <div class="social-links">
+                <a href="mailto:pranavkh25@gmail.com" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/FrostByte-49" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/pranav-kh/" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
