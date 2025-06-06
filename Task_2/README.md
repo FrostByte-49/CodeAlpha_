@@ -80,8 +80,8 @@ To run the project locally:
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/yourusername/Task_2.git
-cd Task_2
+git clone https://github.com/FrostByte-49/CodeAlpha_.git
+cd CodeAlpha_/Task_2
 ```
 
 2. **Open in Browser**
