@@ -74,8 +74,8 @@ Follow these steps to run locally:
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/Task_1.git
-   cd Task_1
+   git clone https://github.com/FrostByte-49/CodeAlpha_.git
+   cd CodeAlpha_/Task_1
    ```
 
 2. **Open `index.html` in your browser**
